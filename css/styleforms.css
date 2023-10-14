@@ -1,0 +1,158 @@
+/* Remove margens, preenchimentos, borsas indesejadas */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-x: hidden; /* Remove barras laterais */
+}
+
+/* ============================ Estilo cabeçalho ============================ */
+header    
+{
+    background-color: #735ae5;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.titulo{
+    color: rgb(255, 255, 255);
+    font-size: 27px;
+    font-family: 'ND Logos';
+    text-align: center;
+
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1vw;
+
+}
+
+.links a {
+    text-decoration: none;
+    color: #dddce7;
+
+}
+
+/* ========================================================================== */
+
+
+/* ============================ Estilo main ================================= */
+
+/* centralizar e deixar a iamgem sustentavel */
+.imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+/* centraliza forms */
+.formGrupo{
+    display: inline-block;
+    align-items: center;
+    margin: 5% 40%;
+    font-family: 'Play', sans-serif;
+    font-size: 25px;
+}
+
+.formGrupo2{
+    padding: 0vw 1.4vw;
+    
+}
+
+/* borda e detalhes dos campos */
+input, textarea {
+    flex: 2;   
+    padding: 5px 20px;  
+    border: 1px solid #ccc; /* adiciona borda nos campos */
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.doa{
+    text-align: center;
+    font-size: 80%;
+    color: rgb(137, 137, 137);
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+
+.enviar{
+    display: inline-block;
+    margin: 1vw 6vw;
+    
+
+}
+
+/* ========================================================================== */
+
+
+/* ============================ Estilo rodapé =============================== */
+
+/* cor, fonte, alinhamento, tamanho */
+.footer {
+
+    /* fixa rodapé em baixo da pagina */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #11096f;
+    font-family: 'Play', sans-serif;
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px 0px; /* Tamanho da grade do rodapé */
+    min-height: 100px; /* Defina a altura mínima desejada */
+}
+
+/* cor da fonte, preencher janela, tamanho da fonte */
+.footer .row {
+    color: antiquewhite;
+    width: 100%;
+    font-size: large;
+    text-align: center; /* Centraliza o conteúdo verticalmente */
+
+    display: inline-block;
+    margin: 0px 5px; /* Ajuste a margem entre os itens das informaçoes */
+    text-align: center;
+
+}
+
+
+/* contetudo da descrição do rodapé */
+.desc {           
+    color: rgb(209, 207, 205);
+    width: 100%;
+    font-family: sans-serif;
+    font-size: medium;
+    text-align: center; /* Centraliza o conteúdo verticalmente */
+    
+}
+
+/* cor contato */
+h2{
+    color: #7859ff;
+
+}
+
+/* Deixa o link branco e com efeito ao passar o mouse */
+.footer .row a {
+    text-decoration: none;
+    color: rgb(255, 245, 108);
+    transition: 0.2s;
+
+}
+
+/* Muda de cor ao passar o mouse */
+.footer .row a:hover {
+    color: #3ab6eb;
+
+}
+
+/* ========================================================================== */

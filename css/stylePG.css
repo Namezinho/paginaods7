@@ -1,0 +1,150 @@
+/* Remove margens, preenchimentos, borsas indesejadas */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/* remover barra de rolagem lateral */
+body {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* ============================ Estilo cabeçalho ============================ */
+header    
+{
+    background-color: #735ae5;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.titulo{
+    color: rgb(255, 255, 255);
+    font-size: 27px;
+    font-family: 'ND Logos';
+    text-align: center;
+
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1vw;
+
+}
+
+.links a {
+    text-decoration: none;
+    color: #dddce7;
+}
+
+/* ========================================================================== */
+
+
+/* ============================ Estilo main ================================= */
+
+/* formatação main */
+.corpo{
+    display: inline-block;
+    margin: 5vw 0vw;
+    align-items: center;
+    text-align: center;
+    font-family: 'Play', sans-serif;
+    font-size: 20px;
+}
+
+/* Formatação 'Oque é ODS' */
+.ods{
+    display: flex;
+    margin-bottom: 5vw;
+}
+
+.text{
+    margin: 0vw 6vw;
+    text-align: left;
+}
+
+/* Formatação 'ODS 7' */
+.ods7{
+    display: flex;
+}
+
+.ods7_img{
+    margin: 0vw 3vw;
+}
+
+.text1{
+    margin-left: 6vw;
+    margin-right: 6vw;
+    text-align: left;
+}
+
+/* ========================================================================== */
+
+
+/* ============================ Estilo rodapé =============================== */
+
+/* cor, fonte, alinhamento, tamanho */
+.footer {
+
+    /* fixa rodapé em baixo da pagina */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #11096f;
+    font-family: 'Play', sans-serif;
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px 0px; /* Tamanho da grade do rodapé */
+    min-height: 100px; /* Defina a altura mínima desejada */
+}
+
+/* cor da fonte, preencher janela, tamanho da fonte */
+.footer .row {
+    color: antiquewhite;
+    width: 100%;
+    font-size: large;
+    text-align: center; /* Centraliza o conteúdo verticalmente */
+
+    display: inline-block;
+    margin: 0px 5px; /* Ajuste a margem entre os itens das informaçoes */
+    text-align: center;
+    
+}
+
+/* contetudo da descrição do rodapé */
+.desc {           
+    color: rgb(209, 207, 205);
+    width: 100%;
+    font-family: sans-serif;
+    font-size: medium;
+    text-align: center; /* Centraliza o conteúdo verticalmente */
+    
+}
+
+/* cor contato */
+h2{
+    color: #7859ff;
+}
+
+/* Deixa o link branco e com efeito ao passar o mouse */
+.footer .row a {
+    text-decoration: none;
+    color: rgb(255, 245, 108);
+    transition: 0.2s;
+}
+
+/* Muda de cor ao passar o mouse */
+.footer .row a:hover {
+    color: #3ab6eb;
+
+}
+
+/* ========================================================================== */

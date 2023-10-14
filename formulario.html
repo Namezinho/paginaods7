@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleforms.css"/>
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+
+    <title> Formulario </title>
+</head>
+<body>
+    <!-- cabeçalho -->
+    <header>
+        <!--=== logo sol ===-->
+        <div class="logo">
+            <figure>
+                <img src="figs/sol.png" alt="logo" width="73" height="47">
+            </figure>
+        </div>
+    
+        <div class="titulo">
+            Formulario
+        </div>
+    
+        <!-- menu de navegação -->
+        <div class="links">
+            <!-- pagina inial -->
+            <a href="pagina_inicial.html">Pagina inicialㅤ</a>     <!-- abre a pagina inicial -->
+
+            <!-- pagina sobre a ODS7 -->
+            <a href="ods.html">ODS 7</a>    <!-- abre a pagina informativa -->
+
+        </div>
+    </header>
+
+    <!-- corpo -->
+    <main>
+        <figure>
+            <div class="imagem">
+            <img src="figs/ajuda.png" alt="sustentavel">
+            </div>
+        </figure>
+            
+        <!-- formulario -->
+        <form>
+            <div class="formGrupo">
+                <div class="formGrupo2">
+                    <label for='nome'> Nome:</label>
+                    <input type="text" id="nome" name="username" placeholder="não utilize acento" required> <br><br>
+        
+                    <label for='idade'> Idade:</label>
+                    <input type="number" id="idade" name="idade" min="18" max="120" required> <br><br>
+
+                    <label for='email'> E-mail:</label> 
+                    <input type="email" id="email" name="email" placeholder="e-mail mais usado" required> <br><br>
+
+                    <label for='area'> Como quer ajudar?: </label>
+                    <textarea id="area" rows="5" cols="30"></textarea><br><br>
+                </div>
+
+                <div class="doa">
+                    <p> Ao votar 'sim' será enviado ao seu e-mail o número da conta! </p>
+                </div>
+                
+                <label for="doação"> Deseja fazer uma doação?: ㅤ </label>
+                <select id="doação" name="doação">
+                    <option value="sim">sim</option>
+                    <option value="não">não</option>
+                </select> 
+
+                <br>
+
+                <div class="enviar">
+                    <input type="submit">
+                </div>
+            </div>
+        </form>
+    </main>
+
+     
+    <!-- rodapé -->
+    <footer>    
+        <div class="footer">    <!-- Classe para editar apenas a lista de info -->
+            <div class="row">
+                <h2> contatos </h2>
+                <p><a href="https://www.instagram.com/no_name.doc/"  target="_blank">instagram</a>  | <a href="https://wa.me/5543998283379"> telefone </a>| <a href="mailto:kauangoncalves@alunos.utfpr.edu.br"  target="_blank"> E-mail</a></p>
+            </div>
+
+            <figure>
+                <img src="figs/utf.png" alt="logo utfpr" width="200" height="133">
+            </figure>
+                    
+            <div class="desc">   <!-- Classe para definir o restante do footer -->
+                <p>Projeto ODS 7 - progamação* web-front-end 2023 | UTFPR</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* Remove margens, preenchimentos, borsas indesejadas */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-x: hidden; /* Remove barras laterais */
+}
+
+
+/* ============================ Estilo cabeçalho ============================ */
+header    
+{
+    background-color: #735ae5;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.titulo{
+    color: rgb(255, 255, 255);
+    font-size: 27px;
+    font-family: 'ND Logos';
+    text-align: center;
+
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1vw;
+
+}
+
+.links a {
+    text-decoration: none;
+    color: #dddce7;
+}
+
+/* ========================================================================== */
+
+
+/* ============================ Estilo main ================================= */
+
+/* centralizar e deixar a iamgem sustentavel */
+.imagem-desafios, .imagem-painel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+/* centralizar e formatar texto do site */
+.text{
+    font-family: 'Play', sans-serif;
+    text-align: center;         /* Centraliza o conteudo horizontalmente */
+    margin: 5vw;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+}
+
+/* ========================================================================== */
+
+
+/* ============================ Estilo rodapé =============================== */
+
+/* cor, fonte, alinhamento, tamanho */
+.footer {
+
+    /* fixa rodapé em baixo da pagina */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #11096f;
+    font-family: 'Play', sans-serif;
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 20px 0px; /* Tamanho da grade do rodapé */
+    min-height: 100px; /* Defina a altura mínima desejada */
+}
+
+/* contetudo da descrição do rodapé */
+.desc {           
+    color: rgb(209, 207, 205);
+    width: 100%;
+    font-family: sans-serif;
+    font-size: medium;
+    text-align: center; /* Centraliza o conteúdo verticalmente */
+    
+}
+
+/* cor contato */
+h2{
+    color: #7859ff;
+}
+
+/* Define margem entre os itens da lista */
+.footer .row {
+    color: antiquewhite;
+    width: 100%;
+    font-size: large;
+    text-align: center; /* Centraliza o conteúdo verticalmente */
+
+    display: inline-block;
+    margin: 0px 5px; /* Ajuste a margem entre os itens das informaçoes */
+    text-align: center;
+    
+}
+
+
+/* Deixa o link branco e com efeito ao passar o mouse */
+.footer .row a {
+    text-decoration: none;
+    color: rgb(255, 245, 108);
+    transition: 0.2s;
+}
+
+/* Muda de cor ao passar o mouse */
+.footer .row a:hover {
+    color: #3ab6eb;
+}
+
+/* ========================================================================== */
