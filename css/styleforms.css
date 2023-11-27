@@ -43,6 +43,10 @@ header
 
 
 /* ============================ Estilo main ================================= */
+.main{
+    display: flex;
+
+}
 
 /* centralizar e deixar a iamgem sustentavel */
 .imagem{
@@ -53,16 +57,29 @@ header
 
 }
 
+.formGrupo{
+    padding: 5vw 0vw;
+    justify-content: left;
+    align-items: center;
+
+}
+
+
 /* centraliza forms */
 .formGrupo{
     display: inline-block;
     align-items: center;
-    margin: 5% 40%;
+    margin: 5% 20%;
     font-family: 'Play', sans-serif;
     font-size: 25px;
 }
+label {
+    text-align: left;
+    font-family: 'Play', sans-serif;
 
+}
 .formGrupo2{
+    margin: 0vw 0vw;
     padding: 0vw 1.4vw;
     
 }
@@ -83,14 +100,85 @@ input, textarea {
 
 }
 
+.botaoEnviar,
+.botaoLimpar{
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #735ae5;
+    color: white;
+    transition: background-color 0.3s ease;
+    font-family: 'Play', sans-serif;
 
-
-.enviar{
-    display: inline-block;
-    margin: 1vw 6vw;
-    
 
 }
+
+/* Lista do formulario */
+
+#listaItens {
+    align-items: center;
+    border: 1px solid #03161C; /* Adiciona uma borda */
+    border-radius: 15px; /* Define o raio dos cantos */
+    padding: 2vw 5vw; /* Adiciona um espaçamento interno */
+    margin: 2vw 2vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    font-family: 'Play', sans-serif;
+}
+
+li{
+    margin-top: 2vw;
+    margin: 2vw;
+
+}
+
+.botaoExcluirItem {
+    position: absolute;
+    right: 10px; /* Ajuste a posição direita conforme necessário */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    z-index: 1; /* Garante que o botão esteja acima dos itens da lista */
+    font-size: 16px;
+    border: 5px #B70026;
+    border-radius: 4px;
+    background-color: #B70026;
+    color: white;
+    transition: background-color 0.3s ease;
+    font-family: 'Play', sans-serif;
+}
+
+#listaItens li {
+    position: relative;
+    padding-right: 20px; /* Ajuste o padding para dar espaço ao botão de exclusão */
+    /* Seu restante de estilos... */
+}
+
+.botaoLimparLista,
+.botaoPesquisa {  
+    margin: 0px 10px;
+    margin-top: 3vw;
+    padding: 8px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #735ae5;
+    color: white;
+    transition: background-color 0.3s ease;
+    font-family: 'Play', sans-serif;
+
+}
+
+.botaoExcluirItem:hover {
+    background-color: #CF1E34;
+}
+.botaoEnviar:hover,
+.botaoLimpar:hover,
+.botaoLimparLista:hover {
+    background-color: #221891;
+}
+
 
 /* ========================================================================== */
 
