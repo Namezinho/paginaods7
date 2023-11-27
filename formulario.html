@@ -34,16 +34,17 @@
         </div>
     </header>
 
+    <figure>
+        <div class="imagem">
+        <img src="figs/ajuda.png" alt="sustentavel">
+        </div>
+    </figure>
+
     <!-- corpo -->
-    <main>
-        <figure>
-            <div class="imagem">
-            <img src="figs/ajuda.png" alt="sustentavel">
-            </div>
-        </figure>
+    <main class="main">
             
         <!-- formulario -->
-        <form>
+        <form id="meuForm">
             <div class="formGrupo">
                 <div class="formGrupo2">
                     <label for='nome'> Nome:</label>
@@ -71,11 +72,35 @@
 
                 <br>
 
+                <!-- JAVA EDITADO -->
                 <div class="enviar">
-                    <input type="submit">
+                    <input type="submit" value="Enviar" class="botaoEnviar">
+                    <button type="button" value="Limpar" class="botaoLimpar" onclick="limparCampos()"> Limpar </button>
                 </div>
             </div>
         </form>
+
+            <!-- Pesquisa -->
+        <div class="containerLista"> 
+
+            <!-- Botão para limpar a lista -->
+            <div class="containerBotaoLimparLista">
+                <label for="campoPesquisa">Pesquisar por nome:</label>
+                <input type="text" id="campoPesquisa" placeholder="Digite o nome">
+                <button class="botaoPesquisa" onclick="pesquisarLista()">Pesquisar</button>
+                <button class="botaoLimparLista" onclick="limparLista()">Limpar Lista</button>
+                
+            </div>
+
+            <div class="listaForm">
+                <ul id="listaItens">
+                    <!-- itens do formulário -->
+                </ul>
+                
+            </div>
+        </div>
+              
+
     </main>
 
      
@@ -96,5 +121,101 @@
             </div>
         </div>
     </footer>
+
+    <!-- Script JavaScript -->
+    <script>
+        const form = document.getElementById('meuForm');
+        const listaItens = document.getElementById('listaItens');
+
+        // Função para lidar com o envio do formulário
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const nome = document.getElementById('nome').value;
+            const idade = document.getElementById('idade').value;
+            const email = document.getElementById('email').value;
+            const area = document.getElementById('area').value;
+            const doacao = document.getElementById('doação').value;
+
+            const formData = {
+                nome,
+                idade,
+                email,
+                area,
+                doacao,
+                dataEnvio: new Date().toLocaleDateString()
+            };
+
+            // Salvando os dados no armazenamento local
+            const dadosAntigos = localStorage.getItem('formularioData');
+            const dados = dadosAntigos ? JSON.parse(dadosAntigos) : [];
+            dados.push(formData);
+            localStorage.setItem('formularioData', JSON.stringify(dados));
+
+            // Mostrar os itens do formulário
+            const itemLista = document.createElement('li');
+            itemLista.textContent = `Nome: ${formData.nome}, Idade: ${formData.idade}`;
+
+            // Cria um botão de exclusão ccada item
+            const botaoExcluir = document.createElement('button');
+            botaoExcluir.textContent = 'Excluir Item';
+            botaoExcluir.className = 'botaoExcluirItem';
+            botaoExcluir.onclick = function() {
+                // Chama a função excluirItem passando o índice deste item na lista
+                excluirItem(dados.indexOf(formData));
+            };
+            itemLista.appendChild(botaoExcluir);
+
+            listaItens.appendChild(itemLista);
+
+            form.reset();
+        });
+
+        // Função para limpar os campos do formulário
+        function limparCampos() {
+            form.reset();
+        }
+
+        // limpa todos os itens da lista
+        function limparLista() {
+            listaItens.innerHTML = ''; 
+            localStorage.removeItem('formularioData');
+        }
+
+        // Função para excluir um item da lista e do LocalStorage
+        function excluirItem(index) {
+            const dadosAntigos = localStorage.getItem('formularioData');
+            const dados = dadosAntigos ? JSON.parse(dadosAntigos) : [];
+
+            // Remove o item da lista de dados com base no índice passado como parâmetro
+            dados.splice(index, 1);
+
+            // Atualiza os dados no LocalStorage após a remoção do item
+            localStorage.setItem('formularioData', JSON.stringify(dados));
+
+            // Remove o item da lista exibida no HTML
+            listaItens.removeChild(listaItens.childNodes[index]);
+        }
+            // função para pesquisar
+            function pesquisarLista() {
+            const input = document.getElementById('campoPesquisa');
+            const filtro = input.value.toUpperCase();
+            const lista = document.getElementById('listaItens');
+            const itens = lista.getElementsByTagName('li');
+
+            // Itera sobre os itens da lista e exibe apenas os que correspondem ao filtro
+            for (let i = 0; i < itens.length; i++) {
+                const item = itens[i];
+                const texto = item.textContent || item.innerText;
+
+                if (texto.toUpperCase().indexOf(filtro) > -1) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            }
+        }
+        
+    </script>
 </body>
 </html>
